@@ -8,6 +8,9 @@ import {
   APPLY_NUMBER,
   CHANGE_OPERATION,
   CLEAR_DISPLAY,
+  ADD_MEMORY,
+  R_MEMORY,
+  CLEAR_MEMORY,
 } from "./actions";
 
 function App() {
@@ -33,9 +36,22 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={"M+"} />
-              <CalcButton value={"MR"} />
-              <CalcButton value={"MC"} />
+              <CalcButton
+                value={"M+"}
+                onClick={(e) =>
+                  dispatch({ type: ADD_MEMORY, payload: e.target.value })
+                }
+              />
+              <CalcButton
+                value={"MR"}
+                onClick={(e) =>
+                  dispatch({ type: R_MEMORY, payload: e.target.value })
+                }
+              />
+              <CalcButton
+                value={"MC"}
+                onClick={(e) => dispatch({ type: CLEAR_MEMORY })}
+              />
             </div>
 
             <div className="row">
