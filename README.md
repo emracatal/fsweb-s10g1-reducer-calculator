@@ -32,17 +32,17 @@ Bu hafta reducer yaklaşımını incelediniz. Bu projede bugün öğrendiklerimi
 - [x ] `TotalDisplay` bileşeni bir değer alır ve bu değeri stillenmiş bir textarea'da gösterir. BU BİLEŞENİ DEĞİŞTİRMENİZE GEREK YOK.
 - [ x] `CalcButton` bileşeni bir `onClick` metodu ve bir değer alır, bu değeri görüntüler ve `onClick` metodunu ui butonuna ekler. BU BİLEŞENİ DEĞİŞTİRMENİZE GEREK YOK.
 - [x ] App.js içine, useReducer hookunu import edin, uygulamamızın reducerı ve initialState nesnesi buradan gelecek.
-- [ ] Uygulama stateine ve gönderme fonksiyonuna erişmek için useReducer hookunu kullanın.
+- [x ] Uygulama stateine ve gönderme fonksiyonuna erişmek için useReducer hookunu kullanın.
 
 #### State'i UI'de görüntülemek.
 
 > _Artık App bileşenimizde state'e erişimimiz var (Bunu console.log ya da React dev tools'dan gözlemleyebilirsiniz). State'i örnek ekranımızdaki gibi render edelim._
 
-- [ ] Operation elemanı içindeki "X" i `state.operation` ı referans alarak değiştirin.
-- [ ] Memory elemanı içindeki "0" ı `state.memory` yi referans alarak değiştirin.
-- [ ] TotalDisplay bileşenine değer atarken "0" ı `state.total` ı referans alarak değiştirin.
-- [ ] UI'de initialState'teki değerlerle total, operation ve memory'yi kontrol edin (100, \* ve sırasıyla 100)
-- [ ] Reducer'daki initialState değerini değiştirerek elde ettiğiniz state'i test edin:
+- [ x] Operation elemanı içindeki "X" i `state.operation` ı referans alarak değiştirin.
+- [x ] Memory elemanı içindeki "0" ı `state.memory` yi referans alarak değiştirin.
+- [x ] TotalDisplay bileşenine değer atarken "0" ı `state.total` ı referans alarak değiştirin.
+- [x ] UI'de initialState'teki değerlerle total, operation ve memory'yi kontrol edin (100, \* ve sırasıyla 100)
+- [ x] Reducer'daki initialState değerini değiştirerek elde ettiğiniz state'i test edin:
 
 ```
 export const initialState = {
@@ -52,17 +52,17 @@ export const initialState = {
 }
 ```
 
-- [ ] Ekranınızın state'teki değişikliği doğru bir şekilde yansıttığını kontrol edin.
+- [x ] Ekranınızın state'teki değişikliği doğru bir şekilde yansıttığını kontrol edin.
 
 #### Hazır action'ı bağlama.
 
 > _Artık durumumuzu görebildiğimize göre, kullanıcının değiştirebilmesine izin verelim. Hazır bir action ile başlayalım...Bir tanesini total'e ekleyelim._
 
-- [ ] `ADD_ONE` actionını (./reducer/index.js içindeki) ve `addOne` action oluşturucuyu (./actions/index.js içindeki) alın. Bu action totale 1 ekleyecek.
-- [ ] `addOne` action oluşturucuyu App.js içine import edin.
-- [ ] `App.js` içinde 1 butonuna bir `onClick` event handler metodu ekleyin.
-- [ ] Event handler içinde, `addOne` action oluşturucuyu ekleyin.
-- [ ] 1 butonuna bastığınızda eventinizin doğru çalışıp çalışmadığını tarayıcınızda test edin. Total'iniz 1 artmalı.
+- [x ] `ADD_ONE` actionını (./reducer/index.js içindeki) ve `addOne` action oluşturucuyu (./actions/index.js içindeki) alın. Bu action totale 1 ekleyecek.
+- [x ] `addOne` action oluşturucuyu App.js içine import edin.
+- [ x] `App.js` içinde 1 butonuna bir `onClick` event handler metodu ekleyin.
+- [x ] Event handler içinde, `addOne` action oluşturucuyu ekleyin.
+- [x ] 1 butonuna bastığınızda eventinizin doğru çalışıp çalışmadığını tarayıcınızda test edin. Total'iniz 1 artmalı.
 - [ ] Bir butona tıklandığında güncellenen totali nasıl gösterebileceğimizi düşünün. Neler uygulamalıyız? `sorunu-anlamak.md` dosyası içine, kendi cümlelerinizle tüm adımları yazın.
 
 #### Daha iyi bir hazır action bağlayın.
