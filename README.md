@@ -16,11 +16,11 @@ Bu hafta reducer yaklaşımını incelediniz. Bu projede bugün öğrendiklerimi
 
 ### Görev 1: Proje Kurulumu
 
-- [ ] Forklayın
-- [ ] Klonlayın
-- [ ] Ana dizine gidin
-- [ ] `npm install`
-- [ ] `npm start`
+- [x ] Forklayın
+- [x ] Klonlayın
+- [x ] Ana dizine gidin
+- [ x] `npm install`
+- [ x] `npm start`
 
 ### Görev 2: Proje Gereksinimleri
 
@@ -28,10 +28,10 @@ Bu hafta reducer yaklaşımını incelediniz. Bu projede bugün öğrendiklerimi
 
 > _Kullanıcı arayüzümüzü reducera ve ilk state'e bağlayarak sürecimize başlayalım.._
 
-- [ ] Uygulama klasöründe gezinin, özellikle "App.js", "/reducer/index.js" ve "/actions/index.js" dosyaları.
-- [ ] `TotalDisplay` bileşeni bir değer alır ve bu değeri stillenmiş bir textarea'da gösterir. BU BİLEŞENİ DEĞİŞTİRMENİZE GEREK YOK.
-- [ ] `CalcButton` bileşeni bir `onClick` metodu ve bir değer alır, bu değeri görüntüler ve `onClick` metodunu ui butonuna ekler. BU BİLEŞENİ DEĞİŞTİRMENİZE GEREK YOK.
-- [ ] App.js içine, useReducer hookunu import edin, uygulamamızın reducerı ve initialState nesnesi buradan gelecek.
+- [x ] Uygulama klasöründe gezinin, özellikle "App.js", "/reducer/index.js" ve "/actions/index.js" dosyaları.
+- [x ] `TotalDisplay` bileşeni bir değer alır ve bu değeri stillenmiş bir textarea'da gösterir. BU BİLEŞENİ DEĞİŞTİRMENİZE GEREK YOK.
+- [ x] `CalcButton` bileşeni bir `onClick` metodu ve bir değer alır, bu değeri görüntüler ve `onClick` metodunu ui butonuna ekler. BU BİLEŞENİ DEĞİŞTİRMENİZE GEREK YOK.
+- [x ] App.js içine, useReducer hookunu import edin, uygulamamızın reducerı ve initialState nesnesi buradan gelecek.
 - [ ] Uygulama stateine ve gönderme fonksiyonuna erişmek için useReducer hookunu kullanın.
 
 #### State'i UI'de görüntülemek.
