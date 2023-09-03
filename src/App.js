@@ -9,11 +9,13 @@ import {
   CHANGE_OPERATION,
   CLEAR_DISPLAY,
   ADD_MEMORY,
-  R_MEMORY,
+  RECALL_MEMORY,
   CLEAR_MEMORY,
 } from "./actions";
+import { clearDisplay } from "./actions";
 
 function App() {
+  //dispatch kargocu
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
@@ -38,26 +40,24 @@ function App() {
             <div className="row">
               <CalcButton
                 value={"M+"}
-                onClick={(e) =>
-                  dispatch({ type: ADD_MEMORY, payload: e.target.value })
-                }
+                onClick={() => dispatch({ type: ADD_MEMORY })}
               />
               <CalcButton
                 value={"MR"}
-                onClick={(e) =>
-                  dispatch({ type: R_MEMORY, payload: e.target.value })
-                }
+                onClick={() => dispatch({ type: RECALL_MEMORY })}
               />
               <CalcButton
                 value={"MC"}
-                onClick={(e) => dispatch({ type: CLEAR_MEMORY })}
+                onClick={() => dispatch({ type: CLEAR_MEMORY })}
               />
             </div>
 
             <div className="row">
               <CalcButton
                 value={1}
-                onClick={() => dispatch({ type: ADD_ONE })}
+                onClick={(e) =>
+                  dispatch({ type: APPLY_NUMBER, payload: e.target.value })
+                }
               />
               <CalcButton
                 value={2}
@@ -139,7 +139,7 @@ function App() {
             <div className="row ce_button">
               <CalcButton
                 value={"CE"}
-                onClick={(e) => dispatch({ type: CLEAR_DISPLAY })}
+                onClick={(e) => dispatch(clearDisplay())}
               />
             </div>
           </form>

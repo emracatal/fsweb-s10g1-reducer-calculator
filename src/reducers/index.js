@@ -4,7 +4,7 @@ import {
   CHANGE_OPERATION,
   CLEAR_DISPLAY,
   ADD_MEMORY,
-  R_MEMORY,
+  RECALL_MEMORY,
   CLEAR_MEMORY,
 } from "./../actions";
 
@@ -48,7 +48,10 @@ const reducer = (state, action) => {
       };
 
     case CLEAR_DISPLAY:
-      return { ...state, total: 0 };
+      return {
+        ...state,
+        total: 0,
+      };
 
     case ADD_MEMORY:
       return {
@@ -56,14 +59,17 @@ const reducer = (state, action) => {
         memory: state.total,
       };
 
-    case R_MEMORY:
+    case RECALL_MEMORY:
       return {
         ...state,
-        total: state.memory,
+        total: calculateResult(state.total, state.memory, state.operation),
       };
 
     case CLEAR_MEMORY:
-      return { ...state, memory: 0 };
+      return {
+        ...state,
+        memory: 0,
+      };
 
     default:
       return state;
